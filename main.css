@@ -12,8 +12,7 @@ body {
 	overflow: hidden;
 }
 void {
-	/*color: hsl(107, 40%, 57%);*/
-	color: hsl(107, 38%, 52%);
+	color: #43a047;
 
 }
 #net {
@@ -45,8 +44,7 @@ void {
 ul, ul li {
 	display: block;
 	list-style: none;
-	/*color: hsl(196, 64%, 58%);*/
-	color: hsl(196, 60%, 52%);
+	color: #42a6f5;
 
 }
 ul li {
@@ -58,12 +56,12 @@ a {
 	text-decoration: none;
 }
 a:hover {
-	color:  #eb3d54;
+	color:  #ff1744;
 	transition: .1s;
 }
 main {
 	border: solid white .4em;
-	background-color: white;
+	background-color: #fafafa;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 1.4em;
 	line-height: 1.1em;
@@ -88,8 +86,8 @@ main {
 	}
 }
 .searchfield {
-	background: hsl(0, 0%, 60%);
-	color: white;
+	background: #bdbdbd;
+	color: #fff;
 	border: none;
 	display: block;
 	font-family: 'Ubuntu', sans-serif;
