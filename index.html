@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>$</title>
+	<!--
+		<link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+	-->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="main.css" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="pl" />
+</head>
+
+<body>
+	<!-- tło -->
+	<video id="vid" height="100%" width="100%" autoplay loop>
+		<source id="my-video-source" />
+	</video>
+
+	<!--////////////////////////////////////// blok //////////////////////////////////////-->
+	<div id="net" onclick="muteUnmute()"><main onclick="muteAtAll()">
+		<!-- searchbar -->
+		<input type="text" class="searchfield" autofocus placeholder="szukaj" />
+
+		<!-- rzeczy google -->
+		<ul>
+			<li><void>GOOGLE</void> [ </li>
+			<li><a href="https://mail.google.com/mail/u/0/#inbox">mail</a> / </li>
+			<li><a href="https://drive.google.com/drive/my-drive">dysk</a> / </li>
+			<li><a href="https://www.google.pl/maps">mapa</a> / </li>
+			<li><a href="https://translate.google.pl/">tłumacz</a> ]</li>
+		</ul>
+		<br/>
+		<!-- social media -->
+		<ul>
+			<li><void>SOCIAL</void> [ </li>
+			<li><a href="https://www.facebook.com/">facebook</a> / </li>
+			<li><a href="https://www.messenger.com/">messenger</a> / </li>
+			<li><a href="https://www.twitch.tv/">twitch</a> / </li>
+			<li><a href="http://myanimelist.net/profile/lubiejelonki">my anime list</a> ]</li>
+
+		</ul>
+		<br/>
+		<!-- rozrywka -->
+		<ul>
+			<li><void>FUN</void> [ </li>
+			<li><a href="https://www.youtube.com/">youtube</a> / </li>
+			<li><a href="https://soundcloud.com/stream">soundcloud</a> / </li>
+			<li><a href="http://www.4chan.org/">4chan</a> / </li>
+			<li><a href="http://9gag.com/">9gag</a> / </li>
+			<li><a href="http://jbzd.pl/">jbzd</a> / </li>
+			<li><a href="http://www.sadistic.pl/">sadistic</a> ]</li>
+
+		</ul>
+		<br/>
+		<!-- rzeczy -->
+		<ul>
+			<li><void>STUFF</void> [ </li>
+			<li><a href="https://poczta.o2.pl/">poczta o2</a> / </li>			
+			<li><a href="https://github.com/">github</a> / </li>
+			<!-- <li><a href="http://www.empik.com/skuteczny-nowoczesny-c-meyers-scott,p1103920923,ksiazka-p">skuteczny nowoczesny c++</a> / </li> -->
+			<!--<li><a href="http://www.empik.com/c-optymalizacja-kodu-sprawdzone-techniki-zwiekszania-wydajnosci-guntheroth-kurt,p1129449428,ksiazka-p">optymalizacja kodu c++</a> / </li>-->
+			<li><a href="http://www.totempole666.com/comic/the-apprentice-0-cover/">cummoner</a> / </li>
+			<li><a href="https://www.cstimer.net/">cstimer</a> ]</li>
+		</ul>
+		<br/>
+		<!-- playlisty -->
+		<ul>
+			<li><void>PLAYLISTS</void> [ </li>
+			<li><a href="https://youtu.be/mcsmolEb10w?list=PLfGtu6Xmj3P1_yR2LCRQYZvbhRMZFKeT4">vaporwave</a> / </li>
+			<li><a href="https://www.youtube.com/watch?v=LaqBtHiUC8U&list=PLC2tuhuSqVt2uAiAZLBE0pD2tQiabZ-5j">trap</a> / </li>
+			<li><a href="https://youtu.be/NuhtwceEEVk?list=UUSXm6c-n6lsjtyjvdD0bFVw">dnb</a> / </li>
+			<li><a href="https://youtu.be/OpIQNxiKJoE">lofi</a> / </li>
+			<li><a href="https://soundcloud.com/odesza/sets/in-return-deluxe-edition">odesza</a> / </li>
+			<li><a href="https://soundcloud.com/flume/sets/flume-lp">flume</a> / </li>
+			<li><a href="https://youtu.be/F6nt3Sw3Isk?list=PLhzF2L5BlEgatzTvZ67ZN8TfHXGtmaGw6">what so not</a> / </li>
+			<li><a href="https://youtu.be/vwl-5QswJA0?list=RDEM3-01I7BxEDhPWMeFmDTwuQ">rüfüs</a> / </li>
+			<li><a href="https://youtu.be/YmCe3fg7B4w?list=RDEM6cAe0B2ucuNwTwcijTwOwQ">doctor p</a> / </li>
+			<li><a href="https://youtu.be/sTSJcpB9B0Y?list=PLD3jUZvA1Stb1wEY01btY4GntJ37GD-J_">Hermitude</a> ]</li>
+		</ul>
+	</main></div>
+	<!--////////////////////////////////////// koniec bloku //////////////////////////////////////-->
+
+
+	<!--////////////////////////////////////// skrypt ///////////////////////////////////////////-->
+	<!-- net -->
+	<script>
+		// pole wyszukiwania
+		document.getElementsByClassName('searchfield')[0].onkeypress = function(e) {
+			if (!e) e = window.event;
+			var keyCode = e.keyCode || e.which;
+			if (keyCode == '13') {
+				window.location.href = "https://www.google.pl/?gws_rd=ssl#q=" + document.getElementsByClassName('searchfield')[0].value;
+			}
+		};
+
+		// przełącznik wyciszania
+		var vid=document.getElementById("vid");
+		vid.volume=0.12;
+		function muteUnmute() {
+		if (vid.volume==0.12)
+			vid.volume=0.0;
+		else
+			vid.volume=0.12;
+		}
+
+		function muteAtAll() {
+			vid.volume=0.12;
+		}
+
+		// mechanizm losujący
+
+		window.onload = function ()
+		{
+			var myVideoList = [
+				"./webm/01.webm",
+				"./webm/02.webm",
+				"./webm/03.webm",
+				"./webm/04.webm",
+				"./webm/05.webm",
+				"./webm/06.webm",
+				"./webm/07.webm",
+				"./webm/08.webm",
+				"./webm/09.webm",
+				"./webm/10.webm",
+				"./webm/11.webm",
+				"./webm/12.webm",
+				"./webm/13.webm",
+				"./webm/14.webm",
+				"./webm/15.webm",
+				"./webm/16.webm",
+				"./webm/17.webm",
+				"./webm/18.webm",
+				"./webm/19.webm",
+				"./webm/20.webm",
+				"./webm/21.webm",
+				"./webm/22.webm"
+			];
+
+			var selectedVideo=myVideoList[Math.floor(Math.random()*myVideoList.length - 1) + 1];
+			var myVideo=document.getElementById("vid");
+			var myVideoSource=document.getElementById("my-video-source");
+			myVideoSource.src=selectedVideo;
+			myVideo.load();
+			myVideo.play();
+		}
+	
+	</script>
+	<!--////////////////////////////////////// koniec skryptu ///////////////////////////////////////////-->	
+</body>
+
+</html>
+
+<!--/////////////////////////////////////////// koniec strony ////////////////////////////////////////////////-->
