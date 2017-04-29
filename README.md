@@ -1,2 +1,2 @@
 # newtab
-<a href="http://mightyjelen.github.io/newtab">new tab</a>
+<a href="http://mightyjelen.github.io/start-page">start page</a>
