@@ -82,13 +82,14 @@
 	<!-- net -->
 	<script>
 		// pole wyszukiwania
-		document.getElementsByClassName('searchfield')[0].onkeypress = function(e) {
-			if (!e) e = window.event;
-			var keyCode = e.keyCode || e.which;
-			if (keyCode == '13') {
-				window.location.href = "https://www.google.pl/?gws_rd=ssl#q=" + document.getElementsByClassName('searchfield')[0].value;
-			}
-		};
+		
+		// document.getElementsByClassName('searchfield')[0].onkeypress = function(e) {
+		// 	if (!e) e = window.event;
+		// 	var keyCode = e.keyCode || e.which;
+		// 	if (keyCode == '13') {
+		// 		window.location.href = "https://www.google.pl/?gws_rd=ssl#q=" + document.getElementsByClassName('searchfield')[0].value;
+		// 	}
+		// };
 
 		// przełącznik wyciszania
 		var vid=document.getElementById("vid");
