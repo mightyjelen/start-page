@@ -9,15 +9,9 @@
 </head>
 
 <body>
-	<!-- tło -->
-	<video id="vid" height="100%" width="100%" autoplay loop>
-		<source id="my-video-source" />
-	</video>
 
 	<!--////////////////////////////////////// blok //////////////////////////////////////-->
-	<div id="net" onclick="muteUnmute()"><main onclick="muteAtAll()">
-		<!-- searchbar -->
-		<!--<input type="text" class="searchfield" autofocus placeholder="szukaj..." />-->
+	<div id="net"><main>
 
 		<!-- rzeczy google -->
 		<ul>
@@ -56,7 +50,7 @@
 			<li><a href="https://github.com/">GitHub</a> / </li>
 			<!-- <li><a href="http://www.empik.com/skuteczny-nowoczesny-c-meyers-scott,p1103920923,ksiazka-p">skuteczny nowoczesny c++</a> / </li> -->
 			<!--<li><a href="http://www.empik.com/c-optymalizacja-kodu-sprawdzone-techniki-zwiekszania-wydajnosci-guntheroth-kurt,p1129449428,ksiazka-p">optymalizacja kodu c++</a> / </li>-->
-			<li><a href="http://www.totempole666.com/comic/the-apprentice-9/">cummoner</a> / </li>
+			<li><a href="http://www.totempole666.com/comic/the-apprentice-29/">cummoner</a> / </li>
 			<li><a href="https://www.cstimer.net/">cstimer</a> ]</li>
 		</ul>
 		<br/>
@@ -74,77 +68,10 @@
 			<li><a href="https://youtu.be/YmCe3fg7B4w?list=RDEM6cAe0B2ucuNwTwcijTwOwQ">doctor p</a> / </li>
 			<li><a href="https://youtu.be/sTSJcpB9B0Y?list=PLD3jUZvA1Stb1wEY01btY4GntJ37GD-J_">Hermitude</a> ]</li>
 		</ul>
+
 	</main></div>
 	<!--////////////////////////////////////// koniec bloku //////////////////////////////////////-->
 
-
-	<!--////////////////////////////////////// skrypt ///////////////////////////////////////////-->
-	<!-- net -->
-	<script>
-		// pole wyszukiwania
-
-		// document.getElementsByClassName('searchfield')[0].onkeypress = function(e) {
-		// 	if (!e) e = window.event;
-		// 	var keyCode = e.keyCode || e.which;
-		// 	if (keyCode == '13') {
-		// 		window.location.href = "https://www.google.pl/?gws_rd=ssl#q=" + document.getElementsByClassName('searchfield')[0].value;
-		// 	}
-		// };
-
-		// przełącznik wyciszania
-		var vid=document.getElementById("vid");
-		vid.volume=0.12;
-		function muteUnmute() {
-		if (vid.volume==0.12)
-			vid.volume=0.0;
-		else
-			vid.volume=0.12;
-		}
-
-		function muteAtAll() {
-			vid.volume=0.12;
-		}
-
-		// mechanizm losujący
-
-		window.onload = function ()
-		{
-			// lista webm'ów:
-			var myVideoList = [
-				"./webm/01.webm",
-				"./webm/02.webm",
-				"./webm/03.webm",
-				"./webm/04.webm",
-				"./webm/05.webm",
-				"./webm/06.webm",
-				"./webm/07.webm",
-				"./webm/08.webm",
-				"./webm/09.webm",
-				"./webm/10.webm",
-				"./webm/11.webm",
-				"./webm/12.webm",
-				"./webm/13.webm",
-				"./webm/14.webm",
-				"./webm/15.webm",
-				"./webm/16.webm",
-				"./webm/17.webm",
-				"./webm/18.webm",
-				"./webm/19.webm",
-				"./webm/20.webm",
-				"./webm/21.webm",
-				"./webm/22.webm"
-			];
-
-			var selectedVideo=myVideoList[Math.floor(Math.random()*myVideoList.length - 1) + 1];
-			var myVideo=document.getElementById("vid");
-			var myVideoSource=document.getElementById("my-video-source");
-			myVideoSource.src=selectedVideo;
-			myVideo.load();
-			myVideo.play();
-		}
-	
-	</script>
-	<!--////////////////////////////////////// koniec skryptu ///////////////////////////////////////////-->	
 </body>
 
 </html>
